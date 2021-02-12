@@ -3,9 +3,9 @@
 
 # Bots
 - [TeXas](#TeXas)
-- [Simple LaTeX Bot](#Simple LaTeX Bot)
+- [Simple LaTeX Bot](#Simple\ LaTeX\ Bot)
 - [ADLBot](#ADLBot)
-- [PDF Creator](#PDF Creator)
+- [PDF Creator](#PDF\ Creator)
 - [Chessbot](#Chessbot)
 
 # TeXas
