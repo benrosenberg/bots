@@ -54,3 +54,7 @@ By default, the "prefix" for PDF Creator is simply "pdf", which should be entere
 The PDF files themselves are hosted on the site [femto.pw](https://v2.femto.pw) using a `curl` command. The site doesn't have a specified limit to filesize, but a PDF created by PDF Creator shouldn't ever be more than a couple MB anyway.
 
 # Chessbot
+
+This bot was not actually created by me at first; it was instead forked from someone else's chessbot. However, they hadn't touched it in ages and it had broken with updates to Discord's API. I rewrote the bot so that it was compatible with the Discord API rewrite, and added some other features (updating the image instead of re-sending it, using embeds instead of simple image uploads, allowing interactivity with reactions, implementing resignations and draws, etcetera). 
+
+To fix an issue that popped up, I hosted all images of the chessboards on Discord in a burner channel of a private server. The issue with this, of course, was that it was slow (really, any Discord-based chessbot probably will be). The other main issue with chessbot is that it could only play one game at a time. That could probably be fixed without too much pain but I decided that it wasn't really worth it; the bot was kind of a fun project and there already were other, more mainstream, chess bots that had huge databases and stuff, so I decided to just let it go.
