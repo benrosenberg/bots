@@ -5,9 +5,9 @@ All bots are written in discord.py, by thief#0001. Message me on Discord if you 
 
 ## Bots
 - [TeXas](#TeXas)
-- [Simple LaTeX Bot](#"Simple LaTeX Bot")
+- [Simple LaTeX Bot](#Simple%20LaTeX%20Bot)
 - [ADLBot](#ADLBot)
-- [PDF Creator](#"PDF Creator")
+- [PDF Creator](#PDF%20Creator)
 - [Chessbot](#Chessbot)
 
 # TeXas <a name="TeXas"></a>
