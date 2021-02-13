@@ -44,6 +44,9 @@ This bot was created as a basic template for a LaTeX bot. It simply renders LaTe
 ADLBot is a simple bot which checks users' messages for words or phrases which are considered "hate speech" by the ADL (Anti-Defamation League) and alerts users as to which words or phrases triggered the bot. For this, it uses a CSV file of words, and checks the substrings of a user's text against the contents of this file.
 
 # PDF Creator <a name="PDF Creator"></a>
+![PDF Creator icon](pdfboticon.png)
+
+![example use of PDF Creator](pdfCreatorExample.png)
 
 PDF Creator was made to convert various plaintext files into PDFs. For this, it uses a simple pandoc command. It also has some extra features, which include displaying statistics about the conversion (the sizes in bytes of the plaintext input file and the PDF output, and the number of pages the PDF has) as well as a preview of the PDF, which is created using ImageMagick. 
 
