@@ -10,7 +10,7 @@ All bots are written in discord.py, by thief#0001. Message me on Discord if you 
 - [PDF Creator](#PDF%20Creator)
 - [Chessbot](#Chessbot)
 
-# <img src="texasbot.png" alt="icon" width="50"/> TeXas <a name="TeXas"></a>
+# <img src="texasbot.png" alt="icon" width="40"/> TeXas <a name="TeXas"></a>
 
 TeXas is a multipurpose bot that can render LaTeX, do math, and create 2-dimensional graphs. For this, it uses:
  - pdflatex
