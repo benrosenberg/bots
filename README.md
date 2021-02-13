@@ -20,13 +20,16 @@ TeXas is a multipurpose bot that can render LaTeX, do math, and create 2-dimensi
  - Xcas/Giac
  
 ![](texasLatexRenderExample.png)
+
 To render LaTeX, TeXas first creates a PDF with pdflatex, then crops it to the content with pdfcrop, and finally, converts it to a PNG with ImageMagick. There are two settings for density (low and high quality) that either produce a 300 DPI image or 3000 DPI image. The image is saved to a file and uploaded.
 
 ![](texasGnuplotExample.png)
+
 To create the 2-dimensional graphs, TeXas uses gnuplot. The user can specify the desired range of the graph, and can of course give a function of x to plot. The plot is saved to a file and uploaded.
 
-![](texasTextSolveExample.png)
 ![](texasLatexSolveExample.png)
+![](texasTextSolveExample.png)
+
 To solve equations or do numerical math, TeXas uses giac (the CLI backend of Xcas, a powerful computer algebra system). TeXas takes user input, and passes it to giac. The result is stored in a file, along with its LaTeX representation. The user can choose whether they want their output in text form or in the form of a LaTeX PNG, in which case TeXas renders the LaTeX as usual with pdflatex etcetera.
 
 TeXas used to use SymPy to do math, but there were several issues. The first issue was that SymPy was rather slow. The second one was that I was an idiot and allowed users to execute arbitrary code, because I was doing the following:
