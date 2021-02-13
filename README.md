@@ -43,7 +43,7 @@ This bot was created as a basic template for a LaTeX bot. It simply renders LaTe
 
 ADLBot is a simple bot which checks users' messages for words or phrases which are considered "hate speech" by the ADL (Anti-Defamation League) and alerts users as to which words or phrases triggered the bot. For this, it uses a CSV file of words, and checks the substrings of a user's text against the contents of this file.
 
-# <img src="pdfboticon.png" alt="icon" width="200"/> PDF Creator <a name="PDF Creator"></a> 
+# <img src="pdfboticon.png" alt="icon" width="50"/> PDF Creator <a name="PDF Creator"></a> 
 
 ![example use of PDF Creator](pdfCreatorExample.png)
 
