@@ -56,7 +56,7 @@ ADLBot is a simple bot which checks users' messages for words or phrases which a
 
 # <img src="pdfboticon.png" alt="icon" width="30"/> PDF Creator <a name="PDF Creator"></a> 
 
-![](pdfCreatorExample.png)
+![](newpdfCreatorExample.png)
 
 PDF Creator was made to convert various plaintext files into PDFs. For this, it uses a simple pandoc command. It also has some extra features, which include displaying statistics about the conversion (the sizes in bytes of the plaintext input file and the PDF output, and the number of pages the PDF has) as well as a preview of the PDF, which is created using ImageMagick. 
 
