@@ -35,15 +35,15 @@ exec(<arbitrary code>) # was supposed to allow users to access the SymPy functio
 
 I wasn't planning on creating a GitHub repo for TeXas at this time, so I had stored the bot's token in plaintext in the bot.py file itself. After one user tried `solve print("TOKEN")` I decided to switch to giac, which worked very well.
 
-# <img src="latexbot.png" alt="icon" width="50"/> Simple Latex Bot <a name="Simple LaTeX Bot"></a>
+# <img src="latexbot.png" alt="icon" width="30"/> Simple Latex Bot <a name="Simple LaTeX Bot"></a>
 
 This bot was created as a basic template for a LaTeX bot. It simply renders LaTeX as PNGs, much like TeXas.
 
-# <img src="adlbot.png" alt="icon" width="50"/> ADLBot <a name="ADLBot"></a>
+# <img src="adlbot.png" alt="icon" width="30"/> ADLBot <a name="ADLBot"></a>
 
 ADLBot is a simple bot which checks users' messages for words or phrases which are considered "hate speech" by the ADL (Anti-Defamation League) and alerts users as to which words or phrases triggered the bot. For this, it uses a CSV file of words, and checks the substrings of a user's text against the contents of this file.
 
-# <img src="pdfboticon.png" alt="icon" width="50"/> PDF Creator <a name="PDF Creator"></a> 
+# <img src="pdfboticon.png" alt="icon" width="30"/> PDF Creator <a name="PDF Creator"></a> 
 
 ![example use of PDF Creator](pdfCreatorExample.png)
 
@@ -55,7 +55,7 @@ By default, the "prefix" for PDF Creator is simply "pdf", which should be entere
 
 The PDF files themselves are hosted on the site [femto.pw](https://v2.femto.pw) using a `curl` command. The site doesn't have a specified limit to filesize, but a PDF created by PDF Creator shouldn't ever be more than a couple MB anyway.
 
-# <img src="chessbot.png" alt="icon" width="50"/> Chessbot <a name="Chessbot"></a>
+# <img src="chessbot.png" alt="icon" width="30"/> Chessbot <a name="Chessbot"></a>
 
 This bot was not actually created by me at first; it was instead forked from someone else's chessbot. However, they hadn't touched it in ages and it had broken with updates to Discord's API. I rewrote the bot so that it was compatible with the Discord API rewrite, and added some other features (updating the image instead of re-sending it, using embeds instead of simple image uploads, allowing interactivity with reactions, implementing resignations and draws, etcetera). 
 
