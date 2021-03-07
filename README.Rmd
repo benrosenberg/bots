@@ -12,7 +12,10 @@ All bots are written in discord.py, by thief#0001. Message me on Discord if you 
 
 # <img src="images/texasbot.png" alt="icon" width="30"/> TeXas <a name="TeXas"></a>
 
+---
+
 TeXas is a multipurpose bot that can render LaTeX, do math, and create 2-dimensional graphs. For this, it uses:
+
  - pdflatex
  - pdfcrop
  - ImageMagick
@@ -44,17 +47,23 @@ I wasn't planning on creating a GitHub repo for TeXas at this time, so I had sto
 
 # <img src="images/latexbot.png" alt="icon" width="30"/> Simple Latex Bot <a name="Simple LaTeX Bot"></a>
 
+---
+
 ![](images/latexExample.png)
 
 This bot was created as a basic template for a LaTeX bot. It simply renders LaTeX as PNGs, much like TeXas.
 
 # <img src="images/adlbot.png" alt="icon" width="30"/> ADLBot <a name="ADLBot"></a>
 
+---
+
 ![](images/adlbotExample.png)
 
 ADLBot is a simple bot which checks users' messages for words or phrases which are considered "hate speech" by the ADL (Anti-Defamation League) and alerts users as to which words or phrases triggered the bot. For this, it uses a CSV file of words, and checks the substrings of a user's text against the contents of this file.
 
 # <img src="images/pdfboticon.png" alt="icon" width="30"/> PDF Creator <a name="PDF Creator"></a> 
+
+---
 
 ![](images/newpdfCreatorExample.png)
 
@@ -71,6 +80,8 @@ The PDF files themselves are hosted on the site ~~[femto.pw](https://v2.femto.pw
 *Since the syntax for this bot is rather detailed, it has its own page [here](https://bots.thief.fyi/PDFCreator).*
 
 # <img src="images/chessbot.png" alt="icon" width="30"/> Chessbot <a name="Chessbot"></a>
+
+---
 
 ![](images/chessbotExample.png)
 

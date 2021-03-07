@@ -1,0 +1,156 @@
+---
+title: PDF Creator
+author: thief0001
+header: PDF Creator, \today, bots.thief.fyi/PDFCreator
+footer: None. \thepage. None
+---
+
+*(Extended from [bots.thief.fyi](https://bots.thief.fyi) description)*
+
+Throughout this document, Discord messages as input to the bot will be denoted as beginning with a `>` inside of a code block. Attachments are denoted `[ attachment.ext ]`.
+
+## Original purpose
+
+The original purpose of the PDF Creator bot was, as the name would imply, to create PDFs. But then I realized I wanted some extra features to help me with homework, and now it needs its own page to describe all that it does.
+
+# Installation
+
+To use PDF Creator, you should really host your own instance on your own server or computer. Its dependencies follow:
+
+ - Python (the more recent the better -- should work with 3.7.3 and up) and discord.py
+ - `python-dotenv`, for loading the bot token
+ - pandoc, to create `.tex` files
+ - $\LaTeX$, to render the PDFs
+ - ImageMagick, to render the previews
+ - `curl`, to upload files to hosting services
+ - `qpdf`, for page counts
+ - PyYaml, for parsing headers
+
+## Setup
+
+After cloning the repository and installing all the dependencies, create a bot application [here](https://discord.com/developers/applications) and get the token for the bot. Then, create a `.env` file in the directory with the file `bot.py` in it, and with the following contents:
+
+```
+TOKEN=<insert token from discord developer site here>
+```
+
+(You can create this in one line with `echo "TOKEN=<token>" > .env`)
+
+This file will be loaded in and used by `bot.py`.
+
+You can run the bot with `python bot.py`, or `python3 bot.py` depending on how you have configured your Python installation.
+
+# Syntax
+
+This is the most recent syntax (or rather, the most recent syntax that I've uploaded to this site). 
+
+## Usage
+
+There are two ways to create a PDF. The first is by putting the contents of the Markdown file to be used in the actual message body, like so:
+
+```
+> pdf This text will be turned into a PDF.
+```
+
+The contents of the message can be as detailed as the contents of any Markdown file acceptable by the bot, and can include multiple lines, of course. The idea is that you can paste any part of a valid Markdown file into the bot (or even the entire thing) and it should give the same output:
+
+```
+> pdf ---
+title: This is a title
+author: Me
+---
+
+# This is a section
+
+This is some math: $1 + 1 = 2$
+```
+
+The other way files can be processed into PDFs is by attaching them. The files can have `.md` or `.txt` extensions, but both will be processed as Markdown files. The reason support was added for `.txt` extensions was so that pasted messages over 2000 characters, which are by default in Discord turned into a file "message.txt", could be processed.
+
+In order to upload an attachment (or use the default pasting with messages of length > 2000 characters) just upload as normal and make the message content "pdf":
+
+```
+> pdf
+[ message.txt ]
+```
+
+There is a third functionality that PDF Creator has, which is uploading PNG images to a filehosting site and generating a Markdown insert, of the form `![image name](https://image-url.tld)`, for the image. This is done as follows:
+
+```
+> png
+[ image.png ]
+```
+
+This is very useful when you need to take a screenshot and insert it into a file quickly, without manually uploading to a hosting site or saving the image to your computer. The fact that you can take a screenshot in a couple keypresses on Windows with `Win + Shift + S` and then paste that image into Discord with a simple `Ctrl + V` can make this very convenient.
+
+### Special notes about usage
+
+The bot will not look at messages with more than one attachment, or with both content (besides the `pdf`/`png` at the start) and an attachment, or with `png` and then extra message content. It accepts a single message with both the command and content, or a message with just a command and a single attachment. The bot will give error messages on incorrect usage. 
+
+## Markdown
+
+PDF Creator uses a subset of pandoc Markdown (details [here](https://pandoc.org/MANUAL.html#pandocs-markdown)) to generate PDFs. The only differences between the Markdown that PDF Creator can read and the Markdown that pandoc uses are found in the header.
+
+While pandoc's Markdown supports a variety of different types of YAML headers, PDF Creator only supports the following type:
+
+```markdown
+---
+title: Title
+author: Author
+date: \today
+---
+```
+
+The header functionality is only used if PDF Creator can find this kind of header; otherwise, no special details are generated in the output.
+
+### Headers and Footers
+
+This is a recent feature, which should allow for some nicer-looking documents. Headers and footers can be specified in the YAML header as follows:
+
+```markdown
+---
+title: Title
+author: Author
+header: Left Header, Center Header, Right Header
+footer: Left Footer, Center Footer, Right Footer
+---
+```
+
+If no `header: ` or `footer: ` is found, the defaults will be used (current date at the top and page number at the bottom). 
+
+To use only certain parts of the header or footer, use `None` for the parts that should be left blank. You can also use `\today` for the current date, and `\thepage` for the current page. The following header would produce the above-described default header and footer:
+
+```markdown
+---
+title: Title
+author: Author
+header: None, \today, None
+footer: None, Page \thepage, None
+---
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
