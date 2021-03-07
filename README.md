@@ -64,7 +64,7 @@ The input files should be formatted with typical [pandoc Markdown syntax](https:
 
 By default, the "prefix" for PDF Creator is simply "pdf", which should be entered in the "Comments" field if uploading an attachment and should precede any text entered in the text field (followed by a space) if the text field is being used instead of an attachment. 
 
-The PDF files themselves are hosted on the site [femto.pw](https://v2.femto.pw) using a `curl` command. The site doesn't have a specified limit to filesize, but a PDF created by PDF Creator shouldn't ever be more than a couple MB anyway.
+The PDF files themselves are hosted on the site ~~[femto.pw](https://v2.femto.pw)~~ [0x0.st](https://0x0.st) using a `curl` command. (As of March 7th, femto.pw hasn't been working for me when I try to view the images in Chrome, so I just switched to the same host as I use for images.) The site doesn't have a specified limit to filesize, but a PDF created by PDF Creator shouldn't ever be more than a couple MB anyway.
 
 # <img src="chessbot.png" alt="icon" width="30"/> Chessbot <a name="Chessbot"></a>
 
