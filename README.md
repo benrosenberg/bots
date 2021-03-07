@@ -60,11 +60,15 @@ ADLBot is a simple bot which checks users' messages for words or phrases which a
 
 PDF Creator was made to convert various plaintext files into PDFs. For this, it uses a simple pandoc command. It also has some extra features, which include displaying statistics about the conversion (the sizes in bytes of the plaintext input file and the PDF output, and the number of pages the PDF has) as well as a preview of the PDF, which is created using ImageMagick. 
 
+Recently I've added even more features -- now, the bot is less of a PDF creator and more of a general homework-helper (for me at least). If given a PNG, it can upload it to a filehosting site and generate a Markdown insert containing the URL. Also, I've added support for a custom header/footer syntax in the YAML header so that my homework can look better.
+
 The input files should be formatted with typical [pandoc Markdown syntax](https://pandoc.org/MANUAL.html#pandocs-markdown). PDF Creator accepts attachments with .md and .txt extensions, or text straight from Discord's text input field. Only one attachment can be processed at a time per message.
 
 By default, the "prefix" for PDF Creator is simply "pdf", which should be entered in the "Comments" field if uploading an attachment and should precede any text entered in the text field (followed by a space) if the text field is being used instead of an attachment. 
 
 The PDF files themselves are hosted on the site ~~[femto.pw](https://v2.femto.pw)~~ [0x0.st](https://0x0.st) using a `curl` command. (As of March 7th, femto.pw hasn't been working for me when I try to view the images in Chrome, so I just switched to the same host as I use for images.) The site doesn't have a specified limit to filesize, but a PDF created by PDF Creator shouldn't ever be more than a couple MB anyway.
+
+*Since the syntax for this bot is rather detailed, it has its own page [here](https://bots.thief.fyi/PDFCreator).*
 
 # <img src="chessbot.png" alt="icon" width="30"/> Chessbot <a name="Chessbot"></a>
 
