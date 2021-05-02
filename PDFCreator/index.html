@@ -349,7 +349,7 @@ pre code {
 
 
 <h1 class="title toc-ignore">PDF Creator</h1>
-<h4 class="author">Ben Rosenber (thief#0001 on Discord)</h4>
+<h4 class="author">Ben Rosenberg (thief#0001 on Discord)</h4>
 
 </div>
 
@@ -371,7 +371,6 @@ pre code {
 <li>ImageMagick, to render the previews</li>
 <li><code>curl</code>, to upload files to hosting services</li>
 <li><code>qpdf</code>, for page counts</li>
-<li>PyYaml, for parsing headers</li>
 </ul>
 <div id="setup" class="section level2">
 <h2>Setup</h2>
@@ -413,8 +412,7 @@ This is some math: $1 + 1 = 2$</code></pre>
 </div>
 <div id="markdown" class="section level2">
 <h2>Markdown</h2>
-<p>PDF Creator uses a subset of pandoc Markdown (details <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">here</a>) to generate PDFs. The only differences between the Markdown that PDF Creator can read and the Markdown that pandoc uses are found in the header.</p>
-<p>While pandoc’s Markdown supports a variety of different types of YAML headers, PDF Creator only supports the following type:</p>
+<p>PDF Creator uses Pandoc Markdown (details <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">here</a>) to generate PDFs. Pandoc’s Markdown supports a variety of different types of YAML headers, although the simplest is the following type:</p>
 <pre class="markdown"><code>---
 title: Title
 author: Author
