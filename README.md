@@ -1,12 +1,10 @@
-## bots.thief.fyi
-### I've created way too many Discord bots. 
+## bots.benrosenberg.info
 
-All bots are written in discord.py, by thief#0001. Message me on Discord if you have any questions or comments.
+All bots are written in discord.py. Message me on Discord (thief#0001) if you have any questions or comments.
 
 ## Bots
 - [TeXas](#TeXas)
 - [Simple LaTeX Bot](#Simple%20LaTeX%20Bot)
-- [ADLBot](#ADLBot)
 - [PDF Creator](#PDF%20Creator)
 - [Chessbot](#Chessbot)
 
@@ -48,12 +46,6 @@ I wasn't planning on creating a GitHub repo for TeXas at this time, so I had sto
 
 This bot was created as a basic template for a LaTeX bot. It simply renders LaTeX as PNGs, much like TeXas.
 
-# <img src="images/adlbot.png" alt="icon" width="30"/> ADLBot <a name="ADLBot"></a>
-
-![](images/adlbotExample.png)
-
-ADLBot is a simple bot which checks users' messages for words or phrases which are considered "hate speech" by the ADL (Anti-Defamation League) and alerts users as to which words or phrases triggered the bot. For this, it uses a CSV file of words, and checks the substrings of a user's text against the contents of this file.
-
 # <img src="images/pdfboticon.png" alt="icon" width="30"/> PDF Creator <a name="PDF Creator"></a> 
 
 ![](images/newpdfCreatorExample.png)
@@ -66,9 +58,9 @@ The input files should be formatted with typical [pandoc Markdown syntax](https:
 
 By default, the "prefix" for PDF Creator is simply "pdf", which should be entered in the "Comments" field if uploading an attachment and should precede any text entered in the text field (followed by a space) if the text field is being used instead of an attachment. 
 
-The PDF files themselves are hosted on the site ~~[femto.pw](https://v2.femto.pw)~~ [0x0.st](https://0x0.st) using a `curl` command. (As of March 7th, femto.pw hasn't been working for me when I try to view the images in Chrome, so I just switched to the same host as I use for images.) The site doesn't have a specified limit to filesize, but a PDF created by PDF Creator shouldn't ever be more than a couple MB anyway.
+The PDF files themselves are hosted on the site [femto.pw](https://v2.femto.pw) using a `curl` command. The site doesn't have a specified limit to filesize, but a PDF created by PDF Creator shouldn't ever be more than a couple MB anyway.
 
-*Since the syntax for this bot is rather detailed, it has its own page [here](https://bots.thief.fyi/PDFCreator).*
+*Since the syntax for this bot is rather detailed, it has its own page [here](https://bots.benrosenberg.info/PDFCreator).*
 
 # <img src="images/chessbot.png" alt="icon" width="30"/> Chessbot <a name="Chessbot"></a>
 
