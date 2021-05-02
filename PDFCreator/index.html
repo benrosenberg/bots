@@ -349,12 +349,12 @@ pre code {
 
 
 <h1 class="title toc-ignore">PDF Creator</h1>
-<h4 class="author">thief0001</h4>
+<h4 class="author">Ben Rosenber (thief#0001 on Discord)</h4>
 
 </div>
 
 
-<p><em>(Extended from <a href="https://bots.thief.fyi">bots.thief.fyi</a> description)</em></p>
+<p><em>(Extended from <a href="https://bots.benrosenberg.info">bots.benrosenberg.info</a> description)</em></p>
 <p>Throughout this document, Discord messages as input to the bot will be denoted as beginning with a <code>&gt;</code> inside of a code block. Attachments are denoted <code>[ attachment.ext ]</code>.</p>
 <div id="original-purpose" class="section level2">
 <h2>Original purpose</h2>
@@ -420,25 +420,6 @@ title: Title
 author: Author
 date: \today
 ---</code></pre>
-<p>The header functionality is only used if PDF Creator can find this kind of header; otherwise, no special details are generated in the output.</p>
-<div id="headers-and-footers" class="section level3">
-<h3>Headers and Footers</h3>
-<p>This is a recent feature, which should allow for some nicer-looking documents. Headers and footers can be specified in the YAML header as follows:</p>
-<pre class="markdown"><code>---
-title: Title
-author: Author
-header: Left Header, Center Header, Right Header
-footer: Left Footer, Center Footer, Right Footer
----</code></pre>
-<p>If no <code>header:</code> or <code>footer:</code> is found, the defaults will be used (current date at the top and page number at the bottom).</p>
-<p>To use only certain parts of the header or footer, use <code>None</code> for the parts that should be left blank. You can also use <code>\today</code> for the current date, and <code>\thepage</code> for the current page. The following header would produce the above-described default header and footer:</p>
-<pre class="markdown"><code>---
-title: Title
-author: Author
-header: None, \today, None
-footer: None, Page \thepage, None
----</code></pre>
-</div>
 </div>
 </div>
 
