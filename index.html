@@ -106,9 +106,9 @@
 <p>To solve equations or do numerical math, TeXas uses giac (the CLI backend of Xcas, a powerful computer algebra system). TeXas takes user input, and passes it to giac. The result is stored in a file, along with its <span class="math inline">\(\LaTeX\)</span> representation. The user can choose whether they want their output in text form or in the form of a <span class="math inline">\(\LaTeX\)</span> PNG, in which case TeXas renders the <span class="math inline">\(\LaTeX\)</span> as usual with pdflatex etcetera.</p>
 <p>TeXas used to use SymPy to do math, but there were several issues. The first issue was that SymPy was rather slow. The second one was that I was an idiot and allowed users to execute arbitrary code, because I was doing the following:</p>
 
-<code style="color:white;">from sympy import *
-...
-exec(&lt;arbitrary code&gt;)</code>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python hljs"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> <span class="op">*</span> <span class="co"># imported all SymPy functions</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">exec</span>(<span class="op">&lt;</span>arbitrary code<span class="op">&gt;</span>) <span class="co"># was supposed to allow users to access the SymPy functions</span></span></code></pre></div>
   
 <p>I wasn’t planning on creating a GitHub repo for TeXas at this time, so I had stored the bot’s token in plaintext in the bot.py file itself. After one user tried <code>solve print("TOKEN")</code> I decided to switch to giac, which worked very well.</p>
 <h1 id="simple-latex-bot"><img src="images/latexbot.png" alt="icon" width="30"/> Simple Latex Bot <a name="Simple $\LaTeX$ Bot"></a></h1>
