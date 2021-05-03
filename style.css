@@ -125,3 +125,7 @@ code {
 .hljs-formula {
   background: #073642;
 }
+
+.sourceCode .python {
+  color: rgb(131, 148, 150);
+}
