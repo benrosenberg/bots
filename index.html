@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Ben Rosenberg (thief#0001 on Discord)" />
+  <title>Discord Bots</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="C:\Users\xethr\Documents\discord_pandoc.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Discord Bots</h1>
+<p class="author">Ben Rosenberg (thief#0001 on Discord)</p>
+</header>
+<p>All bots are written in discord.py. Message me on Discord (thief#0001) if you have any questions or comments.</p>
+<h2 id="bots">Bots</h2>
+<ul>
+<li><a href="#TeXas">TeXas</a></li>
+<li><a href="#Simple%20$\LaTeX$%20Bot">Simple <span class="math inline">\(\LaTeX\)</span> Bot</a></li>
+<li><a href="#PDF%20Creator">PDF Creator</a></li>
+<li><a href="#Chessbot">Chessbot</a></li>
+</ul>
+<h1 id="texas"><img src="images/texasbot.png" alt="icon" width="30"/> TeXas <a name="TeXas"></a></h1>
+<p>TeXas is a multipurpose bot that can render <span class="math inline">\(\LaTeX\)</span>, do math, and create 2-dimensional graphs. For this, it uses: - pdflatex - pdfcrop - ImageMagick - gnuplot - Xcas/Giac</p>
+<p><img src="images/texasLatexRenderExample.png" /></p>
+<p>To render <span class="math inline">\(\LaTeX\)</span>, TeXas first creates a PDF with pdflatex, then crops it to the content with pdfcrop, and finally, converts it to a PNG with ImageMagick. There are two settings for density (low and high quality) that either produce a 300 DPI image or 3000 DPI image. The image is saved to a file and uploaded.</p>
+<p><img src="images/texasGnuplotExample.png" /></p>
+<p>To create the 2-dimensional graphs, TeXas uses gnuplot. The user can specify the desired range of the graph, and can of course give a function of x to plot. The plot is saved to a file and uploaded.</p>
+<p><img src="images/texasLatexSolveExample.png" /> <img src="images/texasTextSolveExample.png" /></p>
+<p>To solve equations or do numerical math, TeXas uses giac (the CLI backend of Xcas, a powerful computer algebra system). TeXas takes user input, and passes it to giac. The result is stored in a file, along with its <span class="math inline">\(\LaTeX\)</span> representation. The user can choose whether they want their output in text form or in the form of a <span class="math inline">\(\LaTeX\)</span> PNG, in which case TeXas renders the <span class="math inline">\(\LaTeX\)</span> as usual with pdflatex etcetera.</p>
+<p>TeXas used to use SymPy to do math, but there were several issues. The first issue was that SymPy was rather slow. The second one was that I was an idiot and allowed users to execute arbitrary code, because I was doing the following:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> <span class="op">*</span> <span class="co"># imported all SymPy functions</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">exec</span>(<span class="op">&lt;</span>arbitrary code<span class="op">&gt;</span>) <span class="co"># was supposed to allow users to access the SymPy functions</span></span></code></pre></div>
+<p>I wasn’t planning on creating a GitHub repo for TeXas at this time, so I had stored the bot’s token in plaintext in the bot.py file itself. After one user tried <code>solve print("TOKEN")</code> I decided to switch to giac, which worked very well.</p>
+<h1 id="simple-latex-bot"><img src="images/latexbot.png" alt="icon" width="30"/> Simple Latex Bot <a name="Simple $\LaTeX$ Bot"></a></h1>
+<p><img src="images/latexExample.png" /></p>
+<p>This bot was created as a basic template for a <span class="math inline">\(\LaTeX\)</span> bot. It simply renders <span class="math inline">\(\LaTeX\)</span> as PNGs, much like TeXas.</p>
+<h1 id="pdf-creator"><img src="images/pdfboticon.png" alt="icon" width="30"/> PDF Creator <a name="PDF Creator"></a></h1>
+<p><img src="images/newpdfCreatorExample.png" /></p>
+<p>PDF Creator was made to convert various plaintext files into PDFs. For this, it uses a simple pandoc command. It also has some extra features, which include displaying statistics about the conversion (the sizes in bytes of the plaintext input file and the PDF output, and the number of pages the PDF has) as well as a preview of the PDF, which is created using ImageMagick.</p>
+<p>Recently I’ve added even more features – now, the bot is less of a PDF creator and more of a general homework-helper (for me at least). If given a PNG, it can upload it to a filehosting site and generate a Markdown insert containing the URL.</p>
+<p>The input files should be formatted with typical <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">pandoc Markdown syntax</a>. PDF Creator accepts attachments with .md and .txt extensions, or text straight from Discord’s text input field. Only one attachment can be processed at a time per message.</p>
+<p>By default, the “prefix” for PDF Creator is simply “pdf”, which should be entered in the “Comments” field if uploading an attachment and should precede any text entered in the text field (followed by a space) if the text field is being used instead of an attachment.</p>
+<p>The PDF files themselves are hosted on the site <a href="https://v2.femto.pw">femto.pw</a> using a <code>curl</code> command. The site doesn’t have a specified limit to filesize, but a PDF created by PDF Creator shouldn’t ever be more than a couple MB anyway.</p>
+<p><em>Since the syntax for this bot is rather detailed, it has its own page <a href="https://bots.benrosenberg.info/PDFCreator">here</a>.</em></p>
+<h1 id="chessbot"><img src="images/chessbot.png" alt="icon" width="30"/> Chessbot <a name="Chessbot"></a></h1>
+<p><img src="images/chessbotExample.png" /></p>
+<p>This bot was not actually created by me at first; it was instead forked from someone else’s chessbot. However, they hadn’t touched it in ages and it had broken with updates to Discord’s API. I rewrote the bot so that it was compatible with the Discord API rewrite, and added some other features (updating the image instead of re-sending it, using embeds instead of simple image uploads, allowing interactivity with reactions, implementing resignations and draws, etcetera).</p>
+<p>To fix an issue that popped up, I hosted all images of the chessboards on Discord in a burner channel of a private server. The issue with this, of course, was that it was slow (really, any Discord-based chessbot probably will be). The other main issue with chessbot is that it could only play one game at a time. That could probably be fixed without too much pain but I decided that it wasn’t really worth it; the bot was kind of a fun project and there already were other, more mainstream, chess bots that had huge databases and stuff, so I decided to just let it go.</p>
+</body>
+</html>
