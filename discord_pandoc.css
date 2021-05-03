@@ -1,0 +1,127 @@
+
+main {
+  max-width: 38rem;
+  padding: 2rem;
+  margin: auto;
+}
+
+body {
+  /*margin-top: 100px;
+  margin-bottom: 100px;*/
+  margin-right: 25%;
+  margin-left: 25%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--discord-background-color) !important;
+  font-size: large;
+}
+
+:root {
+  --discord-offwhite-text-color: rgb(220, 221, 222);
+  --discord-link-color: rgb(0, 176, 244);
+  --discord-background-color: rgb(54, 57, 63);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul li,
+th,
+td {
+  color: var(--discord-offwhite-text-color) !important;
+}
+
+a {
+  color: var(--discord-link-color) !important;
+}
+
+ul li::marker {
+  color: var(--discord-offwhite-text);
+}
+
+pre {
+  background: rgb(46, 49, 54);
+  border-color: rgb(40, 43, 48);
+}
+
+code {
+  background-color: rgb(47, 49, 54);
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  -webkit-text-size-adjust: none;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: 700;
+}
+
+.hljs {
+  color: #839496;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #586e75;
+}
+
+.hljs-addition,
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #859900;
+}
+
+.hljs-doctag,
+.hljs-literal,
+.hljs-meta .hljs-meta-string,
+.hljs-number,
+.hljs-regexp,
+.hljs-string {
+  color: #2aa198;
+}
+
+.hljs-name,
+.hljs-section,
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-title {
+  color: #268bd2;
+}
+
+.hljs-attr,
+.hljs-attribute,
+.hljs-class .hljs-title,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable {
+  color: #b58900;
+}
+
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-meta .hljs-keyword,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-subst,
+.hljs-symbol {
+  color: #cb4b16;
+}
+
+.hljs-built_in,
+.hljs-deletion {
+  color: #dc322f;
+}
+
+.hljs-formula {
+  background: #073642;
+}
