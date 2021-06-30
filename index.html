@@ -111,10 +111,10 @@
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">exec</span>(<span class="op">&lt;</span>arbitrary code<span class="op">&gt;</span>) <span class="co"># was supposed to allow users to access the SymPy functions</span></span></code></pre></div>
   
 <p>I wasn’t planning on creating a GitHub repo for TeXas at this time, so I had stored the bot’s token in plaintext in the bot.py file itself. After one user tried <code>solve print("TOKEN")</code> I decided to switch to giac, which worked very well.</p>
-<h1 id="simple-latex-bot"><img src="images/latexbot.png" alt="icon" width="30"/> Simple Latex Bot <a name="Simple $\LaTeX$ Bot"></a></h1>
+<h1 id="simple-latex-bot"><img src="images/latexbot.png" alt="icon" width="30"/> <a href="https://github.com/benrosenberg/simple-latex-bot">Simple Latex Bot</a> <a name="Simple $\LaTeX$ Bot"></a></h1>
 <p><img src="images/latexExample.png" /></p>
 <p>This bot was created as a basic template for a <span class="math inline">\(\LaTeX\)</span> bot. It simply renders <span class="math inline">\(\LaTeX\)</span> as PNGs, much like TeXas.</p>
-<h1 id="pdf-creator"><img src="images/pdfboticon.png" alt="icon" width="30"/> PDF Creator <a name="PDF Creator"></a></h1>
+<h1 id="pdf-creator"><img src="images/pdfboticon.png" alt="icon" width="30"/> <a href="https://github.com/benrosenberg/PDF-Creator-Bot">PDF Creator</a> <a name="PDF Creator"></a></h1>
 <p><img src="images/newpdfCreatorExample.png" /></p>
 <p>PDF Creator was made to convert various plaintext files into PDFs. For this, it uses a simple pandoc command. It also has some extra features, which include displaying statistics about the conversion (the sizes in bytes of the plaintext input file and the PDF output, and the number of pages the PDF has) as well as a preview of the PDF, which is created using ImageMagick.</p>
 <p>Recently I’ve added even more features – now, the bot is less of a PDF creator and more of a general homework-helper (for me at least). If given a PNG, it can upload it to a filehosting site and generate a Markdown insert containing the URL.</p>
@@ -122,7 +122,7 @@
 <p>By default, the “prefix” for PDF Creator is simply “pdf”, which should be entered in the “Comments” field if uploading an attachment and should precede any text entered in the text field (followed by a space) if the text field is being used instead of an attachment.</p>
 <p>The PDF files themselves are hosted on the site <a href="https://v2.femto.pw">femto.pw</a> using a <code>curl</code> command. The site doesn’t have a specified limit to filesize, but a PDF created by PDF Creator shouldn’t ever be more than a couple MB anyway.</p>
 <p><em>Since the syntax for this bot is rather detailed, it has its own page <a href="https://bots.benrosenberg.info/PDFCreator">here</a>.</em></p>
-<h1 id="chessbot"><img src="images/chessbot.png" alt="icon" width="30"/> Chessbot <a name="Chessbot"></a></h1>
+<h1 id="chessbot"><img src="images/chessbot.png" alt="icon" width="30"/> <a href="https://github.com/benrosenberg/chessbot">Chessbot</a> <a name="Chessbot"></a></h1>
 <p><img src="images/chessbotExample.png" /></p>
 <p>This bot was not actually created by me at first; it was instead forked from someone else’s chessbot. However, they hadn’t touched it in ages and it had broken with updates to Discord’s API. I rewrote the bot so that it was compatible with the Discord API rewrite, and added some other features (updating the image instead of re-sending it, using embeds instead of simple image uploads, allowing interactivity with reactions, implementing resignations and draws, etcetera).</p>
 <p>To fix an issue that popped up, I hosted all images of the chessboards on Discord in a burner channel of a private server. The issue with this, of course, was that it was slow (really, any Discord-based chessbot probably will be). The other main issue with chessbot is that it could only play one game at a time. That could probably be fixed without too much pain but I decided that it wasn’t really worth it; the bot was kind of a fun project and there already were other, more mainstream, chess bots that had huge databases and stuff, so I decided to just let it go.</p>
